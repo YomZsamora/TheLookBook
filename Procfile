@@ -1,0 +1,1 @@
+web: ./build/install/TheLookBook/bin/TheLookBook
