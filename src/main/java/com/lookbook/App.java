@@ -18,8 +18,6 @@ import static spark.Spark.post;
 import static spark.Spark.port;
 import static spark.Spark.staticFileLocation;
 
-
-
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
