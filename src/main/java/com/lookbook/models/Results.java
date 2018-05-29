@@ -1,5 +1,5 @@
 
-package com.lookbook;
+package com.lookbook.models;
 
 import java.util.HashMap;
 import java.util.List;
