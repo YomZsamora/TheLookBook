@@ -7,7 +7,7 @@ import java.util.Map;
 public class Work {
 
     private Id id;
-    private BooksCount booksCount;
+    private BooksCount books_count;
     private RatingsCount ratingsCount;
     private TextReviewsCount textReviewsCount;
     private OriginalPublicationYear originalPublicationYear;
@@ -26,11 +26,11 @@ public class Work {
     }
 
     public BooksCount getBooksCount() {
-        return booksCount;
+        return books_count;
     }
 
     public void setBooksCount(BooksCount booksCount) {
-        this.booksCount = booksCount;
+        this.books_count = booksCount;
     }
 
     public RatingsCount getRatingsCount() {

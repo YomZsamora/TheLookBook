@@ -36,6 +36,11 @@
 				</div>
 			</div>
 		</form>
+		<ul>
+			#foreach ($author in $authors)
+				<li>$author.getBooksCount()</li>
+			#end
+		</ul>
 	</div>
 	<div class="col-md-3"></div>
 </div>
