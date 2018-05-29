@@ -13,7 +13,6 @@ Deciding what to read next? You’re in the right place. Tell the app what title
 A very simple app to exemplify how to get data from the GoodReads API using http calls on the server side. It doesn't make use of the database. Once the data is received, it is "forwarded" to the client to be displayed. One can display more data if desired.
 
 ##### Overview
-
 The App does the following:
 1. Fetch the books from the GoodReads API in JSON format
 2. Deserialize the JSON data for each of the books into `Book` objects

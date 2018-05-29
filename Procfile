@@ -1,1 +1,1 @@
-web: ./build/install/TheLookBook/bin/TheLookBook
+web: ./build/install/TheLookBook/bin/TheLookBook 
