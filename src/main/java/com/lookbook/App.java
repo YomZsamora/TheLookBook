@@ -29,11 +29,11 @@ public class App {
    public static Books processWeatherResults(Response response) {
       Books result = null;
 
-        try {
-            String jsonData = response.body().string();
+      try {
+         String jsonData = response.body().string();
 
-            if (response.isSuccessful()) {
-                JSONObject responseJson = new JSONObject(jsonData);
+         if (response.isSuccessful()) {
+            JSONObject responseJson = new JSONObject(jsonData);
 
                 Gson gson = new GsonBuilder().create();
                 result = gson.fromJson(responseJson.toString(), Books.class);
