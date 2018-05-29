@@ -26,6 +26,25 @@ import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
 public class App {
+   public static WeatherResult processWeatherResults(Response response) {
+        WeatherResult result = null;
+
+        try {
+            String jsonData = response.body().string();
+
+            if (response.isSuccessful()) {
+                JSONObject responseJson = new JSONObject(jsonData);
+
+                Gson gson = new GsonBuilder().create();
+                result = gson.fromJson(responseJson.toString(), WeatherResult.class);
+            }
+        } catch (JSONException | NullPointerException | IOException e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+   
   	public static void main(String[] args) {
       ProcessBuilder process = new ProcessBuilder();
       Integer port;
