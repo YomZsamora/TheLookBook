@@ -44,7 +44,7 @@ public class App {
 
         return result;
     }
-   
+
   	public static void main(String[] args) {
       ProcessBuilder process = new ProcessBuilder();
       Integer port;
@@ -53,7 +53,8 @@ public class App {
       } else {
          port = 4567;
       }
-      setPort(port);
+      port(port);
+      enableDebugScreen();
 
     	staticFileLocation("/public");
     	String layout = "templates/layout.vtl";
