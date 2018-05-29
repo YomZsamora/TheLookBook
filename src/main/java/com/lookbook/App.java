@@ -26,8 +26,8 @@ import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
 public class App {
-   public static WeatherResult processWeatherResults(Response response) {
-        WeatherResult result = null;
+   public static Books processWeatherResults(Response response) {
+      Books result = null;
 
         try {
             String jsonData = response.body().string();
@@ -36,7 +36,7 @@ public class App {
                 JSONObject responseJson = new JSONObject(jsonData);
 
                 Gson gson = new GsonBuilder().create();
-                result = gson.fromJson(responseJson.toString(), WeatherResult.class);
+                result = gson.fromJson(responseJson.toString(), Books.class);
             }
         } catch (JSONException | NullPointerException | IOException e) {
             e.printStackTrace();
