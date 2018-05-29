@@ -1,13 +1,27 @@
 package com.lookbook;
-
 import com.lookbook.models.Books;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
+import okhttp3.HttpUrl;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import static spark.debug.DebugScreen.enableDebugScreen;
+import static spark.Spark.get;
+import static spark.Spark.post;
+import static spark.Spark.port;
+import static spark.Spark.staticFileLocation;
+
+
+
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
-import static spark.Spark.*;
 
 public class App {
   	public static void main(String[] args) {
