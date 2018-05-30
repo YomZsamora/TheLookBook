@@ -13,7 +13,7 @@ public class Work {
     private OriginalPublicationYear originalPublicationYear;
     private OriginalPublicationMonth originalPublicationMonth;
     private OriginalPublicationDay originalPublicationDay;
-    private String averageRating;
+    private String average_rating;
     private BestBook bestBook;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -74,11 +74,11 @@ public class Work {
     }
 
     public String getAverageRating() {
-        return averageRating;
+        return average_rating;
     }
 
-    public void setAverageRating(String averageRating) {
-        this.averageRating = averageRating;
+    public void setAverageRating(String average_rating) {
+        this.average_rating = average_rating;
     }
 
     public BestBook getBestBook() {

@@ -105,7 +105,7 @@ public class App {
                List<Work> result = processResults(response);
                if (result != null) {
                   model.put("authors", result);
-                  // logger.info("Request is: "+request);
+                  logger.info("Request is: "+request);
                }
             } catch(IOException e) {
                e.getStackTrace();
