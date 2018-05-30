@@ -229,8 +229,18 @@ body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;l
 #header #sign .login {
     margin-right: 10px
 }
+
 .search-book-form h3 {
     text-align: center;
+}
+
+.search-book-form h1 {
+    text-align: center;
+    font-family: 'Bowlby One SC', cursive;
+}
+
+#logo h1 {
+    font-family: 'Bowlby One SC', cursive;
 }
 
 p.lookbook-intro {

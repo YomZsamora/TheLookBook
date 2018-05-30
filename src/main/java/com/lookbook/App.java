@@ -91,28 +91,28 @@ public class App {
          Map<String, Object> model = new HashMap<>();
 
          HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.BASE_URL).newBuilder();
-            urlBuilder.addQueryParameter(Constants.API_PARAMETER,Constants.API);
-            urlBuilder.addQueryParameter(Constants.QUERY_PARAMETER,Constants.QUERY);
+         urlBuilder.addQueryParameter(Constants.API_PARAMETER,Constants.API);
+         urlBuilder.addQueryParameter(Constants.QUERY_PARAMETER,Constants.QUERY);
 
-            String url = urlBuilder.build().toString();
-            logger.info("url is: " + url);
+         String url = urlBuilder.build().toString();
+         logger.info("url is: " + url);
 
-            Request request = new Request.Builder()
-               .url(url)
-               .build();
+         Request request = new Request.Builder()
+            .url(url)
+            .build();
 
-            try (Response response = client.newCall(request).execute()) {
-               List<Work> result = processResults(response);
-               if (result != null) {
-                  model.put("authors", result);
-                  logger.info("Request is: "+request);
-               }
-            } catch(IOException e) {
-               e.getStackTrace();
+         try (Response response = client.newCall(request).execute()) {
+            List<Work> result = processResults(response);
+            if (result != null) {
+               model.put("authors", result);
+               logger.info("Request is: "+request);
             }
+         } catch(IOException e) {
+            e.getStackTrace();
+         }
 
-            model.put("template", "templates/index.vtl");
-            return new VelocityTemplateEngine().render(new ModelAndView(model, layout));
-        });
-    }
+         model.put("template", "templates/index.vtl");
+         return new VelocityTemplateEngine().render(new ModelAndView(model, layout));
+      });
+   }
 }
