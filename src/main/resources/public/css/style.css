@@ -229,6 +229,14 @@ body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;l
 #header #sign .login {
     margin-right: 10px
 }
+.search-book-form h3 {
+    text-align: center;
+}
+
+p.lookbook-intro {
+    font-size: 18px;
+    text-align: center;
+}
 
 #header #sign .login a {
     margin-top: 1px;
