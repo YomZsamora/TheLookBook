@@ -25,19 +25,14 @@
 <div class="row mt140">
 	<div class="col-md-3"></div>
 	<div class="col-md-6 search-book-form">
-		<h1>TheLookBook</h1>
-		<h3>Get Free Books and Join 10,000+ Fellow Readers!</h3>
-		<form action="/searchBook" method="post">
-			<div class="form-group">
-				<div class="input-group mb15">
-					<input class="form-control input-lg" name="searchBookQuery" placeholder="Search for Books by Name, Author, Title ..." type="text" >
-					<span class="input-group-btn">
-						<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-					</span>
-				</div>
-			</div>
-		</form>
-		<p class="lookbook-intro">This group project uses the GoodReads API so you can browse through the most popular titles, recommendations, or recent reviews from GoodReads. Perhaps you'll find something interesting in the special collections. There are more than 29,000 eBooks available.</p>
+		<ul>
+			#foreach ($avgRating in $avgRatings)
+				<li>
+					$avgRating.getAverageRating()<br>
+					$avgRating.getRatingsCount()
+				</li>
+			#end
+		</ul>
 	</div>
 	<div class="col-md-3"></div>
 </div>

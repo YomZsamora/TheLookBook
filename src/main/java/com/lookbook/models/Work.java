@@ -8,7 +8,7 @@ public class Work {
 
     private Id id;
     private BooksCount books_count;
-    private RatingsCount ratingsCount;
+    private RatingsCount ratings_count;
     private TextReviewsCount textReviewsCount;
     private OriginalPublicationYear originalPublicationYear;
     private OriginalPublicationMonth originalPublicationMonth;
@@ -34,11 +34,11 @@ public class Work {
     }
 
     public RatingsCount getRatingsCount() {
-        return ratingsCount;
+        return ratings_count;
     }
 
-    public void setRatingsCount(RatingsCount ratingsCount) {
-        this.ratingsCount = ratingsCount;
+    public void setRatingsCount(RatingsCount ratings_count) {
+        this.ratings_count = ratings_count;
     }
 
     public TextReviewsCount getTextReviewsCount() {

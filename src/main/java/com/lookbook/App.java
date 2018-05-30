@@ -1,5 +1,6 @@
 package com.lookbook;
 import com.lookbook.models.Work;
+import com.lookbook.models.TextReviewsCount;
 
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
@@ -37,8 +38,8 @@ import org.slf4j.LoggerFactory;
 public class App {
    static Logger logger = LoggerFactory.getLogger(App.class);
 
-   public static List<Work> processResults(Response response) {
-      List<Work> results = new ArrayList<>();
+   public static List<Work> workResults(Response response) {
+      List<Work> avgRating = new ArrayList<>();
       // Books result = null;
 
       try {
@@ -55,13 +56,39 @@ public class App {
 
             Type Work = new TypeToken<List<Work>>() {}.getType();
                Gson gson = new GsonBuilder().create();
-               results = gson.fromJson(jsonArray.toString(), Work);                
+               avgRating = gson.fromJson(jsonArray.toString(), Work);                
             }
-         } catch (JSONException | NullPointerException | IOException e) {
-            e.printStackTrace();
-         }
-         return results;
+      } catch (JSONException | NullPointerException | IOException e) {
+         e.printStackTrace();
       }
+      return avgRating;
+   }
+
+   // public static List<TextReviewsCount> processResults(Response response) {
+   //    List<TextReviewsCount> reviewCounts = new ArrayList<>();
+   //    // Books result = null;
+
+   //    try {
+   //       String xmlData = response.body().string();
+
+   //       logger.info("jsonData: " + xmlData);
+   //       if (response.isSuccessful()) {
+   //          JSONObject responseJson = XML.toJSONObject(xmlData);
+   //          JSONArray jsonArray = responseJson.getJSONObject("GoodreadsResponse")
+   //                                             .getJSONObject("search")
+   //                                             .getJSONObject("results")
+   //                                             .getJSONArray("work");
+   //          logger.info("converted: " + jsonArray);
+
+   //          Type TextReviewsCount = new TypeToken<List<TextReviewsCount>>() {}.getType();
+   //             Gson gson = new GsonBuilder().create();
+   //             reviewCounts = gson.fromJson(jsonArray.toString(), TextReviewsCount);                
+   //          }
+   //    } catch (JSONException | NullPointerException | IOException e) {
+   //       e.printStackTrace();
+   //    }
+   //    return reviewCounts;
+   // }
 
   	public static void main(String[] args) {
       OkHttpClient client = new OkHttpClient();
@@ -81,37 +108,65 @@ public class App {
       staticFileLocation("/public");
       String layout = "templates/layout.vtl";
 
+      get("/", (req, res) -> {
+         Map<String, Object> model = new HashMap<>();
+         model.put("template", "templates/index.vtl");
+         return new VelocityTemplateEngine().render(new ModelAndView(model, layout));
+      });
+
       // get("/", (req, res) -> {
       //    Map<String, Object> model = new HashMap<>();
+
+      //    HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.BASE_URL).newBuilder();
+      //    urlBuilder.addQueryParameter(Constants.API_PARAMETER,Constants.API);
+      //    urlBuilder.addQueryParameter(Constants.QUERY_PARAMETER,Constants.QUERY);
+
+      //    String url = urlBuilder.build().toString();
+      //    logger.info("url is: " + url);
+
+      //    Request request = new Request.Builder()
+      //       .url(url)
+      //       .build();
+
+      //    try (Response response = client.newCall(request).execute()) {
+      //       List<Work> result = processResults(response);
+      //       if (result != null) {
+      //          model.put("books", result);
+      //          logger.info("Request is: "+request);
+      //       }
+      //    } catch(IOException e) {
+      //       e.getStackTrace();
+      //    }
+
       //    model.put("template", "templates/index.vtl");
       //    return new VelocityTemplateEngine().render(new ModelAndView(model, layout));
       // });
 
-      get("/", (req, res) -> {
+      post("/searchBook", (req, res) -> {
          Map<String, Object> model = new HashMap<>();
 
          HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.BASE_URL).newBuilder();
          urlBuilder.addQueryParameter(Constants.API_PARAMETER,Constants.API);
-         urlBuilder.addQueryParameter(Constants.QUERY_PARAMETER,Constants.QUERY);
+         urlBuilder.addQueryParameter(Constants.QUERY_PARAMETER,req.queryParams("searchBookQuery"));
 
          String url = urlBuilder.build().toString();
-         logger.info("url is: " + url);
+         // logger.info("url is: " + url);
 
          Request request = new Request.Builder()
             .url(url)
             .build();
 
          try (Response response = client.newCall(request).execute()) {
-            List<Work> result = processResults(response);
-            if (result != null) {
-               model.put("authors", result);
-               logger.info("Request is: "+request);
+            List<Work> avgRating = workResults(response);
+            if (avgRating != null) {
+               model.put("avgRatings", avgRating);
+               // logger.info("Request is: "+request);
             }
          } catch(IOException e) {
             e.getStackTrace();
          }
 
-         model.put("template", "templates/index.vtl");
+         model.put("template", "templates/books.vtl");
          return new VelocityTemplateEngine().render(new ModelAndView(model, layout));
       });
    }
