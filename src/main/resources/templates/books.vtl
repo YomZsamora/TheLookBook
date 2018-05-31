@@ -26,10 +26,10 @@
 	<div class="col-md-3"></div>
 	<div class="col-md-6 search-book-form">
 		<ul>
-			#foreach ($avgRating in $avgRatings)
+			#foreach ($res in $result)
 				<li>
-					$avgRating.getAverageRating()<br>
-					$avgRating.getRatingsCount()
+					$res.getAverageRating()<br>
+					$res.getBestBook().getTitle()
 				</li>
 			#end
 		</ul>

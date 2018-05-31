@@ -11,6 +11,26 @@ public class OriginalPublicationMonth {
     private String nil;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public OriginalPublicationMonth() {
+    }
+
+    /**
+     * 
+     * @param text
+     * @param type
+     * @param nil
+     */
+    public OriginalPublicationMonth(String type, String text, String nil) {
+        super();
+        this.type = type;
+        this.text = text;
+        this.nil = nil;
+    }
+
     public String getType() {
         return type;
     }

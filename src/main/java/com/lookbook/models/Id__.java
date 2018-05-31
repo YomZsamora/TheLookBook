@@ -10,6 +10,24 @@ public class Id__ {
     private String text;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public Id__() {
+    }
+
+    /**
+     * 
+     * @param text
+     * @param type
+     */
+    public Id__(String type, String text) {
+        super();
+        this.type = type;
+        this.text = text;
+    }
+
     public String getType() {
         return type;
     }

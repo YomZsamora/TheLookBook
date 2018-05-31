@@ -7,8 +7,8 @@ import java.util.Map;
 public class Work {
 
     private Id id;
-    private BooksCount books_count;
-    private RatingsCount ratings_count;
+    private BooksCount booksCount;
+    private RatingsCount ratingsCount;
     private TextReviewsCount textReviewsCount;
     private OriginalPublicationYear originalPublicationYear;
     private OriginalPublicationMonth originalPublicationMonth;
@@ -16,6 +16,38 @@ public class Work {
     private String average_rating;
     private BestBook bestBook;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public Work() {
+    }
+
+    /**
+     * 
+     * @param originalPublicationMonth
+     * @param textReviewsCount
+     * @param id
+     * @param average_rating
+     * @param ratingsCount
+     * @param bestBook
+     * @param originalPublicationDay
+     * @param originalPublicationYear
+     * @param booksCount
+     */
+    public Work(Id id, BooksCount booksCount, RatingsCount ratingsCount, TextReviewsCount textReviewsCount, OriginalPublicationYear originalPublicationYear, OriginalPublicationMonth originalPublicationMonth, OriginalPublicationDay originalPublicationDay, String averageRating, BestBook bestBook) {
+        super();
+        this.id = id;
+        this.booksCount = booksCount;
+        this.ratingsCount = ratingsCount;
+        this.textReviewsCount = textReviewsCount;
+        this.originalPublicationYear = originalPublicationYear;
+        this.originalPublicationMonth = originalPublicationMonth;
+        this.originalPublicationDay = originalPublicationDay;
+        this.average_rating = average_rating;
+        this.bestBook = bestBook;
+    }
 
     public Id getId() {
         return id;
@@ -26,19 +58,19 @@ public class Work {
     }
 
     public BooksCount getBooksCount() {
-        return books_count;
+        return booksCount;
     }
 
     public void setBooksCount(BooksCount booksCount) {
-        this.books_count = booksCount;
+        this.booksCount = booksCount;
     }
 
     public RatingsCount getRatingsCount() {
-        return ratings_count;
+        return ratingsCount;
     }
 
-    public void setRatingsCount(RatingsCount ratings_count) {
-        this.ratings_count = ratings_count;
+    public void setRatingsCount(RatingsCount ratingsCount) {
+        this.ratingsCount = ratingsCount;
     }
 
     public TextReviewsCount getTextReviewsCount() {

@@ -15,6 +15,34 @@ public class Search {
     private Results results;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public Search() {
+    }
+
+    /**
+     * 
+     * @param results
+     * @param source
+     * @param totalResults
+     * @param query
+     * @param queryTimeSeconds
+     * @param resultsStart
+     * @param resultsEnd
+     */
+    public Search(String query, String resultsStart, String resultsEnd, String totalResults, String source, String queryTimeSeconds, Results results) {
+        super();
+        this.query = query;
+        this.resultsStart = resultsStart;
+        this.resultsEnd = resultsEnd;
+        this.totalResults = totalResults;
+        this.source = source;
+        this.queryTimeSeconds = queryTimeSeconds;
+        this.results = results;
+    }
+
     public String getQuery() {
         return query;
     }

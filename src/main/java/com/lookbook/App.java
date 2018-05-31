@@ -1,6 +1,5 @@
 package com.lookbook;
 import com.lookbook.models.Work;
-import com.lookbook.models.TextReviewsCount;
 
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
@@ -39,7 +38,7 @@ public class App {
    static Logger logger = LoggerFactory.getLogger(App.class);
 
    public static List<Work> workResults(Response response) {
-      List<Work> avgRating = new ArrayList<>();
+      List<Work> result = new ArrayList<>();
       // Books result = null;
 
       try {
@@ -56,39 +55,13 @@ public class App {
 
             Type Work = new TypeToken<List<Work>>() {}.getType();
                Gson gson = new GsonBuilder().create();
-               avgRating = gson.fromJson(jsonArray.toString(), Work);                
+               result = gson.fromJson(jsonArray.toString(), Work);                
             }
       } catch (JSONException | NullPointerException | IOException e) {
          e.printStackTrace();
       }
-      return avgRating;
+      return result;
    }
-
-   // public static List<TextReviewsCount> processResults(Response response) {
-   //    List<TextReviewsCount> reviewCounts = new ArrayList<>();
-   //    // Books result = null;
-
-   //    try {
-   //       String xmlData = response.body().string();
-
-   //       logger.info("jsonData: " + xmlData);
-   //       if (response.isSuccessful()) {
-   //          JSONObject responseJson = XML.toJSONObject(xmlData);
-   //          JSONArray jsonArray = responseJson.getJSONObject("GoodreadsResponse")
-   //                                             .getJSONObject("search")
-   //                                             .getJSONObject("results")
-   //                                             .getJSONArray("work");
-   //          logger.info("converted: " + jsonArray);
-
-   //          Type TextReviewsCount = new TypeToken<List<TextReviewsCount>>() {}.getType();
-   //             Gson gson = new GsonBuilder().create();
-   //             reviewCounts = gson.fromJson(jsonArray.toString(), TextReviewsCount);                
-   //          }
-   //    } catch (JSONException | NullPointerException | IOException e) {
-   //       e.printStackTrace();
-   //    }
-   //    return reviewCounts;
-   // }
 
   	public static void main(String[] args) {
       OkHttpClient client = new OkHttpClient();
@@ -157,9 +130,9 @@ public class App {
             .build();
 
          try (Response response = client.newCall(request).execute()) {
-            List<Work> avgRating = workResults(response);
-            if (avgRating != null) {
-               model.put("avgRatings", avgRating);
+            List<Work> result = workResults(response);
+            if (result != null) {
+               model.put("result", result);
                // logger.info("Request is: "+request);
             }
          } catch(IOException e) {

@@ -11,6 +11,26 @@ public class Request {
     private String method;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public Request() {
+    }
+
+    /**
+     * 
+     * @param authentication
+     * @param method
+     * @param key
+     */
+    public Request(String authentication, String key, String method) {
+        super();
+        this.authentication = authentication;
+        this.key = key;
+        this.method = method;
+    }
+
     public String getAuthentication() {
         return authentication;
     }

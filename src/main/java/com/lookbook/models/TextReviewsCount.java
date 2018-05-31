@@ -10,6 +10,24 @@ public class TextReviewsCount {
     private String text;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public TextReviewsCount() {
+    }
+
+    /**
+     * 
+     * @param text
+     * @param type
+     */
+    public TextReviewsCount(String type, String text) {
+        super();
+        this.type = type;
+        this.text = text;
+    }
+
     public String getType() {
         return type;
     }

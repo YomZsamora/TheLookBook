@@ -14,6 +14,32 @@ public class BestBook {
     private String smallImageUrl;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public BestBook() {
+    }
+
+    /**
+     * 
+     * @param id
+     * @param author
+     * @param title
+     * @param imageUrl
+     * @param smallImageUrl
+     * @param type
+     */
+    public BestBook(String type, Id_ id, String title, Author author, String imageUrl, String smallImageUrl) {
+        super();
+        this.type = type;
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.imageUrl = imageUrl;
+        this.smallImageUrl = smallImageUrl;
+    }
+
     public String getType() {
         return type;
     }

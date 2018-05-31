@@ -10,6 +10,22 @@ public class Results {
     private List<Work> work = null;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public Results() {
+    }
+
+    /**
+     * 
+     * @param work
+     */
+    public Results(List<Work> work) {
+        super();
+        this.work = work;
+    }
+
     public List<Work> getWork() {
         return work;
     }

@@ -10,6 +10,24 @@ public class GoodreadsResponse {
     private Search search;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public GoodreadsResponse() {
+    }
+
+    /**
+     * 
+     * @param search
+     * @param request
+     */
+    public GoodreadsResponse(Request request, Search search) {
+        super();
+        this.request = request;
+        this.search = search;
+    }
+
     public Request getRequest() {
         return request;
     }

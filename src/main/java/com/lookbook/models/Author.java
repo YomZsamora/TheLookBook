@@ -10,6 +10,24 @@ public class Author {
     private String name;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public Author() {
+    }
+
+    /**
+     * 
+     * @param id
+     * @param name
+     */
+    public Author(Id__ id, String name) {
+        super();
+        this.id = id;
+        this.name = name;
+    }
+
     public Id__ getId() {
         return id;
     }
