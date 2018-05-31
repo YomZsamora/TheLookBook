@@ -6,7 +6,7 @@ A Java and spark web-app that uses GoodReads API to retrieve details / data on b
 
 Deciding what to read next? You’re in the right place. Tell the app what titles or genres you enjoye and it’ll give you surprisingly insightful recommendations.
 
-![thelookbook](https://user-images.githubusercontent.com/38578499/40585148-2fada256-61b6-11e8-957b-5989697c59cb.png)
+![lookbook](https://user-images.githubusercontent.com/38578499/40735759-ab8a341c-6444-11e8-9de3-330a362eac65.png)
 
 ## Getting Started
 
