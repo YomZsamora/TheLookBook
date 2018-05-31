@@ -14,7 +14,7 @@ public class Work {
     private OriginalPublicationMonth originalPublicationMonth;
     private OriginalPublicationDay originalPublicationDay;
     private String average_rating;
-    private BestBook bestBook;
+    private BestBook best_book;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
@@ -31,7 +31,7 @@ public class Work {
      * @param id
      * @param average_rating
      * @param ratingsCount
-     * @param bestBook
+     * @param best_book
      * @param originalPublicationDay
      * @param originalPublicationYear
      * @param booksCount
@@ -46,7 +46,7 @@ public class Work {
         this.originalPublicationMonth = originalPublicationMonth;
         this.originalPublicationDay = originalPublicationDay;
         this.average_rating = average_rating;
-        this.bestBook = bestBook;
+        this.best_book = best_book;
     }
 
     public Id getId() {
@@ -114,11 +114,11 @@ public class Work {
     }
 
     public BestBook getBestBook() {
-        return bestBook;
+        return best_book;
     }
 
-    public void setBestBook(BestBook bestBook) {
-        this.bestBook = bestBook;
+    public void setBestBook(BestBook best_book) {
+        this.best_book = best_book;
     }
 
     public Map<String, Object> getAdditionalProperties() {
