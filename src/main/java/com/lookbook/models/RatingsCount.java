@@ -7,7 +7,7 @@ import java.util.Map;
 public class RatingsCount {
 
     private String type;
-    private String text;
+    private String content;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
@@ -19,13 +19,13 @@ public class RatingsCount {
 
     /**
      * 
-     * @param text
+     * @param content
      * @param type
      */
-    public RatingsCount(String type, String text) {
+    public RatingsCount(String type, String content) {
         super();
         this.type = type;
-        this.text = text;
+        this.content = content;
     }
 
     public String getType() {
@@ -37,11 +37,11 @@ public class RatingsCount {
     }
 
     public String getText() {
-        return text;
+        return content;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setText(String content) {
+        this.content = content;
     }
 
     public Map<String, Object> getAdditionalProperties() {

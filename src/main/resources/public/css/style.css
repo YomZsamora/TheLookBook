@@ -209,6 +209,15 @@ body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;l
     border: 1px solid transparent
 }
 
+.input-sm {
+
+    font-size: 12px !important;
+    padding: 7px 10px !important;
+    height: auto !important;
+    margin-top: 3px;
+
+}
+
 #header #menu>li .sub-menu>li>a:hover {
     background: #f0f8f9;
     border: 1px solid #bbcfd2;
@@ -218,6 +227,18 @@ body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;l
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
     border-radius: 2px
+}
+
+.mb35 {
+    margin-bottom: 35px;
+}
+
+.books-results small {
+    font-size: 95% !important;
+}
+
+.books-results .media-body strong {
+    color: #635C52;
 }
 
 #header #sign {

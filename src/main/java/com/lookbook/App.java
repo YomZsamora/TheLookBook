@@ -44,7 +44,7 @@ public class App {
       try {
          String xmlData = response.body().string();
 
-         logger.info("jsonData: " + xmlData);
+         // logger.info("jsonData: " + xmlData);
          if (response.isSuccessful()) {
             JSONObject responseJson = XML.toJSONObject(xmlData);
             JSONArray jsonArray = responseJson.getJSONObject("GoodreadsResponse")
