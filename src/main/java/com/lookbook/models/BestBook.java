@@ -10,8 +10,8 @@ public class BestBook {
     private Id_ id;
     private String title;
     private Author author;
-    private String imageUrl;
-    private String smallImageUrl;
+    private String image_url;
+    private String small_image_url;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
@@ -26,18 +26,18 @@ public class BestBook {
      * @param id
      * @param author
      * @param title
-     * @param imageUrl
-     * @param smallImageUrl
+     * @param image_url
+     * @param small_image_url
      * @param type
      */
-    public BestBook(String type, Id_ id, String title, Author author, String imageUrl, String smallImageUrl) {
+    public BestBook(String type, Id_ id, String title, Author author, String image_url, String small_image_url) {
         super();
         this.type = type;
         this.id = id;
         this.title = title;
         this.author = author;
-        this.imageUrl = imageUrl;
-        this.smallImageUrl = smallImageUrl;
+        this.image_url = image_url;
+        this.small_image_url = small_image_url;
     }
 
     public String getType() {
@@ -73,19 +73,19 @@ public class BestBook {
     }
 
     public String getImageUrl() {
-        return imageUrl;
+        return image_url;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImageUrl(String image_url) {
+        this.image_url = image_url;
     }
 
     public String getSmallImageUrl() {
-        return smallImageUrl;
+        return small_image_url;
     }
 
-    public void setSmallImageUrl(String smallImageUrl) {
-        this.smallImageUrl = smallImageUrl;
+    public void setSmallImageUrl(String small_image_url) {
+        this.small_image_url = small_image_url;
     }
 
     public Map<String, Object> getAdditionalProperties() {

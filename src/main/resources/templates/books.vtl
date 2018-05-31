@@ -28,8 +28,10 @@
 		<ul>
 			#foreach ($res in $result)
 				<li>
+               <img src="$res.getBestBook().getSmallImageUrl()">
 					$res.getAverageRating()<br>
 					$res.getBestBook().getTitle()
+               $res.getBestBook().getImageUrl()
 				</li>
 			#end
 		</ul>

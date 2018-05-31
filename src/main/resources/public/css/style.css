@@ -1,5 +1,5 @@
 
-body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;line-height:1.6em;color:#8e95a5 !important;background: #23252d !important;}
+body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;line-height:1.6em;color:#635C52 !important;}
 
 #header #menu {
     margin: 0;
@@ -10,7 +10,7 @@ body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;l
 #header {
     z-index: 999;
     min-height: 60px;
-    background: #23252d;
+    background: #635C52;
     text-align: right;
     z-index: 2;
     -webkit-box-shadow: 0 4px 27px #16181e;
@@ -98,7 +98,7 @@ body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;l
     padding: 0 12px;
     height: 33px;
     line-height: 33px;
-    color: #8e95a5;
+    color: #ffffff;
     cursor: pointer
 }
 
@@ -290,20 +290,20 @@ p.lookbook-intro {
 }
 
 #header #search div:hover button {
-    color: #6f778d
+    color: #bd5d38
 }
 
 #header #search div:hover input {
-    border-color: #6f778d
+    border-color: #bd5d38
 }
 
 #header #search div input {
     padding: 0 10px;
     width: 100%;
     height: 32px;
-    border: 1px solid #424754;
+    border: 1px solid #ffffff;
     background: 0 0;
-    color: #8e95a5;
+    color: #fff;
     line-height: 32px;
     -webkit-border-radius: 3px;
     -khtml-border-radius: 3px;
@@ -320,7 +320,7 @@ p.lookbook-intro {
 }
 
 #header #search div input::-webkit-input-placeholder {
-    color: #8e95a5;
+    color: #ffffff;
     opacity: .8;
     -webkit-transition: all .1s ease-in-out 0s;
     -khtml-transition: all .1s ease-in-out 0s;
@@ -331,7 +331,7 @@ p.lookbook-intro {
 }
 
 #header #search div input:-moz-placeholder {
-    color: #8e95a5;
+    color: #ffffff;
     opacity: .8;
     -webkit-transition: all .1s ease-in-out 0s;
     -khtml-transition: all .1s ease-in-out 0s;
@@ -342,7 +342,7 @@ p.lookbook-intro {
 }
 
 #header #search div input::-moz-placeholder {
-    color: #8e95a5;
+    color: #ffffff;
     opacity: .8;
     -webkit-transition: all .1s ease-in-out 0s;
     -khtml-transition: all .1s ease-in-out 0s;
@@ -353,7 +353,7 @@ p.lookbook-intro {
 }
 
 #header #search div input:-ms-input-placeholder {
-    color: #8e95a5;
+    color: #ffffff;
     opacity: .8;
     -webkit-transition: all .1s ease-in-out 0s;
     -khtml-transition: all .1s ease-in-out 0s;
@@ -364,7 +364,7 @@ p.lookbook-intro {
 }
 
 #header #search div input::placeholder {
-    color: #8e95a5;
+    color: #ffffff;
     opacity: .8;
     -webkit-transition: all .1s ease-in-out 0s;
     -khtml-transition: all .1s ease-in-out 0s;
@@ -375,7 +375,7 @@ p.lookbook-intro {
 }
 
 #header #search div input:focus {
-    border-color: #8b92a4
+    border-color: #bd5d38
 }
 
 #header #search div input:focus::-webkit-input-placeholder {
@@ -407,7 +407,7 @@ p.lookbook-intro {
     height: 32px;
     border: none;
     background: 0 0;
-    color: #646b7f;
+    color: #ffffff;
     font-size: 1.2rem;
     -webkit-transition: all .2s ease 0s;
     -khtml-transition: all .2s ease 0s;
@@ -418,7 +418,7 @@ p.lookbook-intro {
 }
 
 #header #search div button:hover {
-    color: #8b92a4
+    color: #bd5d38
 }
 
 #header #search div .suggestions {
