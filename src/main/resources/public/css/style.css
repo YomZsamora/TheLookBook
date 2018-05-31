@@ -238,8 +238,9 @@ body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;l
 }
 
 
-strong.author {
+span.author {
     color: #bd5d38;
+    font-weight: 600;
 }
 
 #header #sign {
