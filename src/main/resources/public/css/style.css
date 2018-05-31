@@ -1,5 +1,9 @@
 
-body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;line-height:1.6em;color:#635C52 !important;}
+body{font-family:'Open Sans', Arial, sans-serif;font-size:14px;font-weight:300;line-height:1.6em;color:#635C52 !important;
+background-image: linear-gradient(rgba(243, 236, 236, 0.61), rgba(243, 241, 241, 0.61)), url(/images/images.jpg);
+background-size: cover;
+}
+
 
 #header #menu {
     margin: 0;

@@ -94,6 +94,7 @@ public class App {
          HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.BASE_URL).newBuilder();
          urlBuilder.addQueryParameter(Constants.API_PARAMETER,Constants.API);
          urlBuilder.addQueryParameter(Constants.QUERY_PARAMETER,req.queryParams("searchBookQuery"));
+         String query = req.queryParams("searchBookQuery");
 
          String url = urlBuilder.build().toString();
          // logger.info("url is: " + url);
@@ -106,6 +107,7 @@ public class App {
             List<Work> result = workResults(response);
             if (result != null) {
                model.put("result", result);
+               model.put("query", query);
                // logger.info("Request is: "+request);
             }
          } catch(IOException e) {
