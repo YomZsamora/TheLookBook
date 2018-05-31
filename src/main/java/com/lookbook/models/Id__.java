@@ -7,7 +7,7 @@ import java.util.Map;
 public class Id__ {
 
     private String type;
-    private String text;
+    private String content;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
@@ -19,13 +19,13 @@ public class Id__ {
 
     /**
      * 
-     * @param text
+     * @param content
      * @param type
      */
-    public Id__(String type, String text) {
+    public Id__(String type, String content) {
         super();
         this.type = type;
-        this.text = text;
+        this.content = content;
     }
 
     public String getType() {
@@ -37,11 +37,11 @@ public class Id__ {
     }
 
     public String getText() {
-        return text;
+        return content;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setText(String content) {
+        this.content = content;
     }
 
     public Map<String, Object> getAdditionalProperties() {

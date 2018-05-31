@@ -47,7 +47,7 @@
                       </a>
                       <div class="media-body">
                         <h4 class="filename text-primary"><a href="/book/$res.getBestBook().getId().getText()">$res.getBestBook().getTitle()</a></h4>
-                        <small class="text-muted">Author: <strong>$res.getBestBook().getAuthor().getName()</strong></small><br>
+                        <small class="text-muted">Author: <a href="/author/$res.getBestBook().getAuthor().getId().getText()"><strong class="author">$res.getBestBook().getAuthor().getName()</strong></a></small><br>
                         <small class="text-muted"><strong>$res.getAverageRating()</strong> avg rating - <strong>$res.getRatingsCount().getText()</strong> ratings - <strong>$res.getBooksCount().getText()</strong> Editions </small><br>
                         <small class="text-muted">Published: <strong>$res.getOriginalPublicationYear().getText()</strong></small>
                       </div>
